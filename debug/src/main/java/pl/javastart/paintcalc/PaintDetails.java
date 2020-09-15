@@ -13,15 +13,7 @@ class PaintDetails {
         return coverage;
     }
 
-    public void setCoverage(int coverage) {
-        this.coverage = coverage;
-    }
-
     public int getCoats() {
         return coats;
-    }
-
-    public void setCoats(int coats) {
-        this.coats = coats;
     }
 }

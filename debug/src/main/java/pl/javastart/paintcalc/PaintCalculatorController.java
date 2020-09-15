@@ -10,19 +10,19 @@ import java.io.IOException;
 public class PaintCalculatorController extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         Room room = getRoom(request);
-        ConstructionElement[] constructionElements = getConstructionElements(request);
         PaintDetails paintDetails = getPaintDetails(request);
-        int paintAmount = PaintCalculator.calculatePaintAmount(room, constructionElements, paintDetails);
-        request.setAttribute("paintArea", PaintCalculator.calculatePaintArea(room, constructionElements));
+        int paintAmount = PaintCalculator.calculatePaintAmount(room, paintDetails);
+        request.setAttribute("room", room);
         request.setAttribute("paintAmount", paintAmount);
-        request.getRequestDispatcher("result.jsp").forward(request, response);
+        request.getRequestDispatcher("/result.jsp").forward(request, response);
     }
 
     private Room getRoom(HttpServletRequest request) {
         int roomLength = Integer.parseInt(request.getParameter("roomLengt"));
         int roomWidth = Integer.parseInt(request.getParameter("roomWidth"));
         int roomHeight = Integer.parseInt(request.getParameter("roomHeight"));
-        return new Room(roomWidth, roomHeight, roomLength);
+        ConstructionElement[] constructionElements = getConstructionElements(request);
+        return new Room(roomWidth, roomHeight, roomLength, constructionElements);
     }
 
     private ConstructionElement[] getConstructionElements(HttpServletRequest request) {
