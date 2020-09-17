@@ -55,12 +55,12 @@ public class ExchangeController extends HttpServlet {
         ExchangeResult exchangeResult = ExchangeCalculator.exchange(value, exchangeType);
         request.setAttribute("result", exchangeResult);
         //utworzenie dyspozytora żądań
-        RequestDispatcher requestDispatcher = request.getRequestDispatcher("result.jsp");
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("/result.jsp");
         //przekazanie żądania do strony result.jsp
         requestDispatcher.forward(request, response);
     }
 
     private void errorDispatch(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.getRequestDispatcher("error.jsp").forward(request, response);
+        request.getRequestDispatcher("/error.jsp").forward(request, response);
     }
 }

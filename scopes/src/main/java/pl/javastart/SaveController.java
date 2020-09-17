@@ -14,7 +14,7 @@ public class SaveController extends HttpServlet {
         saveNote(note, request);
         String noteUrl = NoteUtils.buildNoteUrl(note);
         request.setAttribute("noteUrl", noteUrl);
-        request.getRequestDispatcher("confirmation.jsp").forward(request, response);
+        request.getRequestDispatcher("/confirmation.jsp").forward(request, response);
     }
 
     private void saveNote(Note note, HttpServletRequest request) {

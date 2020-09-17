@@ -19,6 +19,6 @@ public class PersonController extends HttpServlet {
         int age = Integer.parseInt(request.getParameter("age"));
         Person person = new Person(firstName, lastName, age);
         request.setAttribute("person", person);
-        request.getRequestDispatcher("home.jsp").forward(request, response);
+        request.getRequestDispatcher("/home.jsp").forward(request, response);
     }
 }

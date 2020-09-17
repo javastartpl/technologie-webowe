@@ -12,6 +12,6 @@ public class RemoveController extends HttpServlet {
         Cookie removeVisitCookie = new Cookie("visits", "");
         removeVisitCookie.setMaxAge(0);
         response.addCookie(removeVisitCookie);
-        request.getRequestDispatcher("removeConfirm.jsp").forward(request, response);
+        request.getRequestDispatcher("/removeConfirm.jsp").forward(request, response);
     }
 }

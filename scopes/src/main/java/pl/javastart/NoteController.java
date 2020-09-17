@@ -11,7 +11,7 @@ import java.util.Optional;
 public class NoteController extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         findNote(request).ifPresent(note -> request.setAttribute("note", note));
-        request.getRequestDispatcher("note.jsp").forward(request, response);
+        request.getRequestDispatcher("/note.jsp").forward(request, response);
     }
 
     private Optional<String> findNote(HttpServletRequest request) {

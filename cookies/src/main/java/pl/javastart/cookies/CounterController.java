@@ -20,7 +20,7 @@ public class CounterController extends HttpServlet {
         Cookie cookie = new Cookie("visits", Integer.toString(numberOfVisits));
         cookie.setMaxAge(30 * 24 * 60 * 60);
         response.addCookie(cookie);
-        request.getRequestDispatcher("visits.jsp").forward(request, response);
+        request.getRequestDispatcher("/visits.jsp").forward(request, response);
     }
 
     private Optional<Cookie> getCookieByName(HttpServletRequest request, String cookieName) {

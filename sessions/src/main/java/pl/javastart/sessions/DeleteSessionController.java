@@ -13,6 +13,6 @@ public class DeleteSessionController extends HttpServlet {
         HttpSession session = request.getSession(false);
         if (session != null)
             session.invalidate();
-        request.getRequestDispatcher("index.jsp").forward(request, response);
+        request.getRequestDispatcher("/index.jsp").forward(request, response);
     }
 }

@@ -18,7 +18,7 @@ public class WaterController extends HttpServlet {
         } else if (option.equals("clear")) {
             session.removeAttribute("water");
         }
-        request.getRequestDispatcher("index.jsp").forward(request, response);
+        request.getRequestDispatcher("/index.jsp").forward(request, response);
     }
 
     private void increaseWaterLevel(HttpSession session) {
