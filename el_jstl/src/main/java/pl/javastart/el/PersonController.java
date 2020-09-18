@@ -15,7 +15,7 @@ public class PersonController extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String firstName = request.getParameter("firstName");
-        String lastName = request.getParameter("firstName");
+        String lastName = request.getParameter("lastName");
         int age = Integer.parseInt(request.getParameter("age"));
         Person person = new Person(firstName, lastName, age);
         request.setAttribute("person", person);
