@@ -4,7 +4,7 @@
     <title>Expression Language</title>
 </head>
 <body>
-    <form method="post">
+    <form action="" method="post">
         <fieldset>
             <div>
                 <label for="firstName">Imię</label>
