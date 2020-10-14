@@ -47,8 +47,6 @@
         </c:forEach>
     </ol>
 
-    <script>window.alert("Masz wirusa");</script>
-
 <%--<ol>--%>
 <%--    <%--%>
 <%--        List<Person> people = (List<Person>) application.getAttribute("people");--%>
