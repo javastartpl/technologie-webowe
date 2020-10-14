@@ -1,6 +1,6 @@
 package pl.javastart.cp;
 
-class Recipe {
+public class Recipe {
     private Integer id;
     private String title;
     private String description;
