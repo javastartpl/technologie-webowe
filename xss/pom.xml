@@ -7,11 +7,11 @@
     <groupId>pl.javastart</groupId>
     <artifactId>jstl</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <name>el_jstl</name>
+    <name>xss</name>
 
     <properties>
-        <maven.compiler.target>1.8</maven.compiler.target>
-        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>14</maven.compiler.target>
+        <maven.compiler.source>14</maven.compiler.source>
     </properties>
 
     <dependencies>
@@ -21,11 +21,10 @@
             <version>5.0.0-M1</version>
             <scope>provided</scope>
         </dependency>
-
         <dependency>
             <groupId>org.glassfish.web</groupId>
             <artifactId>jakarta.servlet.jsp.jstl</artifactId>
-            <version>1.2.6</version>
+            <version>2.0.0-M1</version>
         </dependency>
     </dependencies>
 

@@ -8,11 +8,11 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-@WebServlet("/")
+@WebServlet("")
 public class PersonController extends HttpServlet {
     @Override
     public void init() {
-        List<Person> testData = new ArrayList<Person>();
+        List<Person> testData = new ArrayList<>();
 //        testData.add(new Person("Anna", "Zarzycka", 26, Gender.FEMALE));
 //        testData.add(new Person("Marcin", "Prokop", 33, Gender.MALE));
 //        testData.add(new Person("Piotr", "Zalewski", 17, Gender.MALE));
