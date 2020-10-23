@@ -14,9 +14,9 @@ public class CounterController extends HttpServlet {
         Integer numberOfVisits = visitsCookie
                 .map(Cookie::getValue)
                 .map(Integer::valueOf)
-                .orElse(1);
-        request.setAttribute("numberOfVisits", numberOfVisits);
+                .orElse(0);
         numberOfVisits++;
+        request.setAttribute("numberOfVisits", numberOfVisits);
         Cookie cookie = new Cookie("visits", Integer.toString(numberOfVisits));
         cookie.setMaxAge(30 * 24 * 60 * 60);
         response.addCookie(cookie);
