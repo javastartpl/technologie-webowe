@@ -74,7 +74,7 @@ CREATE TABLE user_details (
     user_id INT UNIQUE NOT NULL,
     telephone VARCHAR(11),
     city VARCHAR(30),
-    CONSTRAINT fk_user_id FOREIGN KEY (user_id) REFERENCES user(id)
+    FOREIGN KEY (user_id) REFERENCES user(id)
 );
 
 INSERT INTO user_details
