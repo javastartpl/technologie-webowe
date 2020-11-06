@@ -9,11 +9,8 @@
 
     <ul>
     <%
-        for (int i = 0; i < iterations; i++) {
-    %>
-        <li>Element no <%= i %></li>
-    <%
-        }
+        for (int i = 0; i < iterations; i++)
+            out.println("<li>Element no " + i + "</li>");
     %>
     </ul>
 </body>
