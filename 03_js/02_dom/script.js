@@ -7,8 +7,11 @@ removeSecondNews();
 // function addNews() {
 //     let newsList = document.querySelector("#sport-news");
 //     let li = document.createElement("li");
-//     li.append("Niemcy ponownie mistrzami świata w piłce nożnej");
-//     newsList.append(li);
+//     let text = document.createTextNode("Niemcy ponownie mistrzami świata w piłce nożnej");
+//     li.appendChild(text);
+//     //2 wersja:
+//     //li.textContent = "Niemcy ponownie mistrzami świata w piłce nożnej";
+//     newsList.appendChild(li);
 // }
 // addNews();
 
