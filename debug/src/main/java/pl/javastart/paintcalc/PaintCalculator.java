@@ -1,7 +1,7 @@
 package pl.javastart.paintcalc;
 
 class PaintCalculator {
-    private static final int SQM_TO_SQCM = 10_000;
+    static final int SQM_TO_SQCM = 10_000;
 
     static int calculatePaintAmount(Room room,
                                     PaintDetails paintDetails) {
