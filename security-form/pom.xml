@@ -10,16 +10,15 @@
     <name>security-form</name>
 
     <properties>
-        <maven.compiler.target>14</maven.compiler.target>
-        <maven.compiler.source>14</maven.compiler.source>
-        <junit.version>5.6.2</junit.version>
+        <maven.compiler.target>15</maven.compiler.target>
+        <maven.compiler.source>15</maven.compiler.source>
     </properties>
 
     <dependencies>
         <dependency>
             <groupId>jakarta.servlet</groupId>
             <artifactId>jakarta.servlet-api</artifactId>
-            <version>5.0.0-M1</version>
+            <version>5.0.0</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>
