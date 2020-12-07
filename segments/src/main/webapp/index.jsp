@@ -4,7 +4,7 @@
     <title>Strona główna</title>
 </head>
 <body>
-    <%@ include file="header.jspf"%>
+    <jsp:include page="header.jspf"/>
     <main>
         <h1>Strona główna</h1>
         <p>Witamy na stronie głównej naszego sklepu</p>
@@ -15,6 +15,6 @@
             <li>spodnie</li>
         </ul>
     </main>
-    <%@ include file="footer.jspf"%>
+    <jsp:include page="footer.jspf"/>
 </body>
 </html>
