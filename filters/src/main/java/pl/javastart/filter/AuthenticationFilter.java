@@ -10,10 +10,10 @@ import java.io.IOException;
 public class AuthenticationFilter implements Filter {
     private static final String PASS = "h@rdPass";
 
-    public void doFilter(ServletRequest reqest, ServletResponse response, FilterChain chain) throws IOException, ServletException {
-        String pass = reqest.getParameter("pass");
+    public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
+        String pass = request.getParameter("pass");
         if (pass != null && pass.equals(PASS))
-            chain.doFilter(reqest, response);
+            chain.doFilter(request, response);
         else
             ((HttpServletResponse)response).sendError(403, "Wrong password");
     }

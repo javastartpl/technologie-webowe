@@ -9,9 +9,9 @@ import java.io.IOException;
 //@WebFilter("/*")
 public class SecurityLoggingFilter implements Filter {
 
-    public void doFilter(ServletRequest reqest, ServletResponse response, FilterChain chain) throws IOException, ServletException {
-        log(reqest);
-        chain.doFilter(reqest, response);
+    public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
+        log(request);
+        chain.doFilter(request, response);
     }
 
     private void log(ServletRequest request) {
