@@ -29,8 +29,8 @@ public class HomeController extends HttpServlet {
         request.getRequestDispatcher("/WEB-INF/index.jsp").forward(request, response);
     }
 
-    private BigDecimal getSum(List<BudgetItem> incomes) {
-        return incomes.stream()
+    private BigDecimal getSum(List<BudgetItem> items) {
+        return items.stream()
                 .map(BudgetItem::getValue)
                 .reduce(BigDecimal::add)
                 .orElse(BigDecimal.ZERO);
