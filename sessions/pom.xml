@@ -8,6 +8,7 @@
     <artifactId>sessions</artifactId>
     <version>1.0-SNAPSHOT</version>
     <name>sessions</name>
+    <packaging>war</packaging>
 
     <properties>
         <maven.compiler.target>15</maven.compiler.target>

@@ -9,6 +9,7 @@
     <artifactId>jsp</artifactId>
     <version>1.0-SNAPSHOT</version>
     <name>jsp</name>
+    <packaging>war</packaging>
 
     <properties>
         <maven.compiler.target>15</maven.compiler.target>

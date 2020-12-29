@@ -9,6 +9,7 @@
     <artifactId>budget</artifactId>
     <version>1.0-SNAPSHOT</version>
     <name>architektura_start</name>
+    <packaging>war</packaging>
 
     <properties>
         <maven.compiler.target>15</maven.compiler.target>
