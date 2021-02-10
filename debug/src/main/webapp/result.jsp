@@ -7,6 +7,6 @@
     <h1>Kalkulator farby</h1>
     <p>W Twoim pokoju do pomalowania jest ${requestScope.paintArea} metrów kwadratowych</p>
     <p>Potrzebujesz do tego ${requestScope.paintAmount} litrów wybranej farby</p>
-    <a href="${request.getContextPath()}">Powrót do kalkulatora</a>
+    <a href="${pageContext.request.getContextPath()}">Powrót do kalkulatora</a>
 </body>
 </html>
