@@ -30,7 +30,6 @@
         </fieldset>
         <input type="submit" value="Zapisz">
     </form>
-
     <ol>
         <c:forEach items="${applicationScope.people}" var="person">
             <li>
@@ -46,36 +45,10 @@
             </li>
         </c:forEach>
     </ol>
-
-<%--<ol>--%>
-<%--    <%--%>
-<%--        List<Person> people = (List<Person>) application.getAttribute("people");--%>
-<%--        for (Person person : people) {--%>
-<%--    %>--%>
-<%--    <li>--%>
-<%--        <%=person.getFirstName() + " - " + person.getLastName() + "("--%>
-<%--                + person.getAge() + " lat) / " + (person.getGender() == Gender.MALE ? "Mężczyzna" : "Kobieta")--%>
-<%--        %>--%>
-<%--        <%--%>
-<%--            if(person.getAge() >= 18) {--%>
-<%--        %>--%>
-<%--            <span style="color: green">Pełnoletni(a)</span>--%>
-<%--        <%--%>
-<%--        } else {--%>
-<%--        %>--%>
-<%--            <span style="color: red">Nieletni(a)</span>--%>
-<%--        <%--%>
-<%--        }--%>
-<%--        %>--%>
-<%--    </li>--%>
-<%--    <%--%>
-<%--        }--%>
-<%--    %>--%>
-<%--</ol>--%>
     <h2>To co o Tobie wiemy:</h2>
     <h3>Ciasteczka (${fn:length(cookie)}):</h3>
     <c:forEach var="cookieItem" items="${cookie}">
-        <p>${cookieItem.key} : ${cookieItem.value}</p>
+        <p>${cookieItem.key} : ${cookieItem.value.value}</p>
     </c:forEach>
 
     <h3>Informacje z nagłówków (${fn:length(header)}):</h3>
@@ -88,7 +61,7 @@
             <c:when test="${param.password eq 'java' }">
                 <p>Java jest super najlepsza i w ogóle</p>
             </c:when>
-            <c:when test="${param.name eq 'python' }">
+            <c:when test="${param.password eq 'python' }">
                 <p>Python jest fajny, ale Java jeszcze lepsza</p>
             </c:when>
             <c:otherwise>
