@@ -28,7 +28,7 @@
                 <tbody>
                     <c:forEach var="income" items="${requestScope.incomes}">
                         <tr>
-                            <td>${income.description}</td>
+                            <td><c:out value="${income.description}"/></td>
                             <td>${income.value}</td>
                         </tr>
                     </c:forEach>
@@ -49,7 +49,7 @@
                 <tbody>
                 <c:forEach var="expense" items="${requestScope.expenses}">
                     <tr>
-                        <td>${expense.description}</td>
+                        <td><c:out value="${expense.description}"/></td>
                         <td>${expense.value}</td>
                     </tr>
                 </c:forEach>
