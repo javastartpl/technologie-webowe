@@ -4,7 +4,7 @@
         <title>Panel administracyjny</title>
     </head>
     <body>
-        <h1>Cześć <%=request.getParameter("username")%>></h1>
+        <h1>Cześć <%=request.getSession().getAttribute("username")%></h1>
         <p>To jest centrum sterowania światem. Możesz tutaj:</p>
         <ul>
             <li>Zarządzać użytkownikami</li>
