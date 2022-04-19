@@ -19,8 +19,7 @@ class NoteDao {
     }
 
     void save(Note note) {
-        final String sql = String.format("INSERT INTO notes (title, content, pass) VALUES(?, ?, ?)",
-                note.getTitle(), note.getContent(), note.getPassword());
+        final String sql = "INSERT INTO notes (title, content, pass) VALUES(?, ?, ?)";
         try (Connection connection = dataSource.getConnection();
              PreparedStatement statement = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)) { //1
             statement.setString(1, note.getTitle());    //2
