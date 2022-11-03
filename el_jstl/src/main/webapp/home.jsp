@@ -25,8 +25,8 @@
     if(request.getAttribute("person") != null) {
 %>
     <h2>Cześć ${person.firstName}</h2>
-    <p style="color: ${person.age gt 18 ? 'green' : 'red'}">
-        ${person.age gt 18 ? 'Jesteś pełnoletni' : 'Jesteś nieletni'}
+    <p style="color: ${person.age ge 18 ? 'green' : 'red'}">
+        ${person.age ge 18 ? 'Jesteś pełnoletni' : 'Jesteś nieletni'}
     </p>
     <p>Informacje o Twojej przeglądarce: ${header['user-agent']}</p>
 <%

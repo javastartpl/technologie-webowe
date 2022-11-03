@@ -39,7 +39,7 @@
                 <c:if test="${person.age >= 18}">
                     <span style="color: green">Pełnoletni(a)</span>
                 </c:if>
-                <c:if test="${person.age <18}">
+                <c:if test="${person.age < 18}">
                     <span style="color: red">Nieletni(a)</span>
                 </c:if>
             </li>
